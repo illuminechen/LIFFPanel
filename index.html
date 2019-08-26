@@ -88,15 +88,16 @@
 			$(document).ready(function(){
 				liff.init(
 				  data => {
-					  // Now you can call LIFF API
-					  const userId = data.context.userId;                   
+						/*
+						// Now you can call LIFF API
+						const userId = data.context.userId;                   
 						liff.getProfile()
 						.then(profile => {
 						  const name = profile.displayName;
 						})
 						.catch((err) => {
-						  console.log('error', err);
 						});
+						*/
 						send([msg]);
 				  },
 				  err => {
@@ -108,11 +109,9 @@
 			{
 				liff.sendMessages(msglist)
 				.then(() => {
-				  console.log('message sent');
 				  liff.closeWindow();
 				})
 				.catch((err) => {
-				  console.log('error', err);
 				});
 			}
 		</script>
