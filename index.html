@@ -98,22 +98,17 @@
 						.catch((err) => {
 						});
 						*/
-						send([msg]);
-				  },
+						liff.sendMessages([msg])
+						.then(() => {
+						  liff.closeWindow();
+						})
+						.catch((err) => {
+						});				  
+				},
 				  err => {
 				  }
 				);
 			});
-			
-			function send(msglist)
-			{
-				liff.sendMessages(msglist)
-				.then(() => {
-				  liff.closeWindow();
-				})
-				.catch((err) => {
-				});
-			}
 		</script>
 	</body>
 </html>
