@@ -56,34 +56,41 @@
           "type": "flex",
           "altText": "李常受文集追求進度填寫",
           "contents": {
-            "type": "bubble",
-            "header":{
-              "type":"box",
-              "layout":"vertical",
-              "contents":[
-                {
-                  "type": "text",
-                  "text": "李常受文集個人追求進度表"
-                },                  
-              ]
-                },
-                "body": {
-                "type": "box",
-                "layout": "vertical",
-                "contents": [                    
-                {
-                "type": "button",
-                "action": {
-                "type": "uri",
-                "label": "個人追求進度表",
-                "uri": "line://app/1613006452-8eraeKkK?key=cache&title=%E6%9B%B8%E5%A0%B1%E8%BF%BD%E6%B1%82%E9%80%B2%E5%BA%A6%E8%A1%A8%0A&url=https://script.google.com/a/g.ntu.edu.tw/macros/s/AKfycbxce7otOy4no-PmxAHobqYstMmms8ej069xxoLPjKri-D0VwzJd/exec"
-                },
-                "style": "primary",
-                "color": "#0000ff"
-                }
-              ]
-            }
-          }
+			  "type": "bubble",
+			  "body": {
+				"type": "box",
+				"layout": "vertical",
+				"spacing": "lg",
+				"contents": [
+				  {
+					"type": "text",
+					"text": "書報追求個人進度表",
+					"align": "center",
+					"weight": "bold"
+				  },
+				  {
+					"type": "button",
+					"action": {
+					  "type": "uri",
+					  "label": "李常受文集",
+					  "uri": "line://app/1613006452-8eraeKkK?key=cache&title=%E6%9B%B8%E5%A0%B1%E8%BF%BD%E6%B1%82%E9%80%B2%E5%BA%A6%E8%A1%A8%0A&url=https://script.google.com/a/g.ntu.edu.tw/macros/s/AKfycbxce7otOy4no-PmxAHobqYstMmms8ej069xxoLPjKri-D0VwzJd/exec"
+					},
+					"style": "primary",
+					"color": "#003F00"
+				  },
+				  {
+					"type": "button",
+					"action": {
+					  "type": "uri",
+					  "label": "恢復本聖經",
+					  "uri": "line://app/1613006452-8eraeKkK?key=biblecache&title=%E6%81%A2%E5%BE%A9%E6%9C%AC%E8%81%96%E7%B6%93&url=https://script.google.com/a/g.ntu.edu.tw/macros/s/AKfycbxce7otOy4no-PmxAHobqYstMmms8ej069xxoLPjKri-D0VwzJd/exec"
+					},
+					"style": "primary",
+					"color": "#111111"
+				  }
+				]
+			  }
+			}
 		};
 		
 			$(document).ready(function(){
