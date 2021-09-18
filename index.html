@@ -106,7 +106,7 @@
 			}
 		};
 		
-		$(document).ready(function(){
+		window.onload = function(){
 			const urlParams = new URLSearchParams(window.location.search);				
 			const liffId = urlParams.get('liffId');
 
@@ -130,7 +130,7 @@
 					liff.login({redirectUri:window.location.href});
 				}
 			});
-		});
+		};
 		</script>
 	</body>
 </html>
