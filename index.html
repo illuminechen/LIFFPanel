@@ -121,12 +121,21 @@
 			  liffId: liffId				  
 			})
 			.then(() => {
-				liff.sendMessages([msg])
-				.then(() => {
-				  liff.closeWindow();
-				})
-				.catch((err) => {
-				});				  
+				if (liff.isLoggedIn()) {
+					if (liff.isApiAvailable('shareTargetPicker')) {
+						liff.shareTargetPicker([msg])
+					}
+					else {
+						liff.sendMessages([msg])
+						.then(() => {
+						  liff.closeWindow();
+						})
+						.catch((err) => {
+						});			
+					}					
+				} else {
+					liff.login({redirectUri:window.location.href});
+				}
 			});
 		});
 		</script>
